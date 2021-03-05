@@ -106,7 +106,7 @@
 %    \end{macrocode}
 % \changes{v1.0.0}{2021/03/04}{Added elements that are used 
 %   by thesis@bibEntry and thesis@titlePage: field, fieldEn
-%   departmentEn. [TV]}
+%   departmentEn, summary. [TV]}
 %    \begin{macrocode}
 
 \thesissetup{
@@ -157,6 +157,14 @@
 
       span multiple paragraphs.
     },
+    extra              = {
+            summary    = {%
+              This is the summary for my thesis, which can
+
+              span multiple paragraphs.
+            },
+    },
+
 }
 %</econ>
 %<*fi>
@@ -429,7 +437,8 @@
 %    \end{macrocode}
 % \changes{v1.0.0}{2021/03/04}{Added elements that are used
 %   by thesis@bibEntry and thesis@titlePage: fieldEn, departmentEn,
-%   titleEn, TeXtitleEn, keywordsEn, TeXkeywordsEn, abstractEn. [TV]}
+%   titleEn, TeXtitleEn, keywordsEn, TeXkeywordsEn, abstractEn,
+%   summary. [TV]}
 %    \begin{macrocode}
 \thesissetup{
     date        = \the\year/\the\month/\the\day,
@@ -464,6 +473,13 @@
 	                 About the Nature of Man,
     keywordsEn         = {keyword1, keyword2, ...},
     TeXkeywordsEn      = {keyword1, keyword2, \ldots},
+    extra              = {
+	    summary    = {%
+	      This is the summary for my thesis, which can
+
+	      span multiple paragraphs.
+	    },
+    },
 }
 %</phil>
 %<*sci>
