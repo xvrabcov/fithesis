@@ -280,8 +280,10 @@
 % All blocks within the autolayout postamble that are not defined
 % within this file are defined in the \texttt{style/mu/base.sty}
 % file.
+% \changes{v1.0.0}{2021/03/05}{Added summary for doctoral theses. [TV]}
 %    \begin{macrocode}
 \def\thesis@blocks@postamble{%
+  \ifx \thesis@doctoral\thesis@type\thesis@blocks@summary\else\fi
   \thesis@blocks@bibliography
   \thesis@blocks@tables}
 %    \end{macrocode}
