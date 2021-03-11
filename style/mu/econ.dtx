@@ -221,7 +221,7 @@
 %   in \texttt{style/mu/fithesis-econ.sty} in accordance with the
 %   example documents. The patch was submitted by Jana Ratajská.
 %   [VN]}
-% \changes{v1.0.0}{2018/03/05}{Macros for abstract and abstractEn
+% \changes{v1.0.0}{2021/03/05}{Macros for abstract and abstractEn
 %   were moved to \texttt{base.dtx}. [TV]}
 % \begin{macro}{\thesis@blocks@keywords}
 % The |\thesis@blocks@keywords| macro typesets the keywords. This
@@ -250,6 +250,24 @@
       \noindent\thesis@TeXkeywordsEn
     \end{alwayssingle}}%
   \fi}
+%    \end{macrocode}
+% \end{macro}\begin{macro}{\thesis@blocks@summary}
+% \changes{v1.0.0}{2021/03/11}{Macro for the summary was added. [TV]}
+% The |\thesis@blocks@summary| macro typesets the summary
+% for doctoral theses. If the thesis type is not doctoral, the
+% macro produces no output.
+% \begin{macrocode}
+\thesis@def@extra[{
+  \thesis@placeholder@extra@summary
+}]{summary}
+
+\def\thesis@blocks@summary{%
+  \begin{alwayssingle}%
+    \thesis@blocks@clear
+    {\let\thesis@blocks@clear\relax
+    \chapter*{\thesis@@{summaryTitle}}}%
+    \noindent\thesis@extra@summary
+  \end{alwayssingle}}
 %    \end{macrocode}
 % \end{macro}
 
